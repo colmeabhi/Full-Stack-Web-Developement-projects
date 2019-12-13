@@ -10,11 +10,7 @@ body{
 				width: 10%;
 			}
 
-			fieldset{
-				background-color: #dbe2ef;
-			}
-
-      img {
+			img {
         display: block;
         margin-left:4%;
         width: 20%;
@@ -24,3 +20,20 @@ body{
       h2 {
         color: #46cdcf;
       }
+
+			.three {
+				display:inline-block;
+				background-color:blue;
+  			width:200px;
+				height:200px;
+			}
+			.two {
+				display: inline-block;
+				background-color:red;
+				width:200px;
+				height:200px;
+			}
+			.one {
+				display: inline-block;
+			  background-color: #EAF6F6;
+			}
