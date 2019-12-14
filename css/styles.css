@@ -1,5 +1,6 @@
 body{
-		  	background-color : #f9f7f7;
+		  	background-color :#063839;
+				margin: 0;
        }
 
 			hr{
@@ -10,30 +11,24 @@ body{
 				width: 10%;
 			}
 
-			img {
-        display: block;
-        margin-left:4%;
-        width: 20%;
-        height: 20%;
+			.two {
+        display: inline-block;
+				position: relative;
+        margin:200px auto auto 400px;
+
       }
+
+			img {
+				width: 40%;
+        height: 40%;
+			}
 
       h2 {
         color: #46cdcf;
       }
 
-			.three {
-				display:inline-block;
-				background-color:blue;
-  			width:200px;
-				height:200px;
-			}
-			.two {
-				display: inline-block;
-				background-color:red;
-				width:200px;
-				height:200px;
-			}
 			.one {
-				display: inline-block;
-			  background-color: #EAF6F6;
+				display: block;
+				position: relative;
+				margin-left: 400;
 			}
