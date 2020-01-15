@@ -1,0 +1,15 @@
+{
+  "name": "bmi-calc",
+  "version": "1.0.0",
+  "description": "calculator to calculate bmi of body",
+  "main": "bmi_calc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
