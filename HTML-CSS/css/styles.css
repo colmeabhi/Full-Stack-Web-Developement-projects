@@ -1,0 +1,37 @@
+body{
+				background-color: #063839;
+				margin: 0;
+				text-align: center;
+       }
+
+			hr{
+				border-color: #3f72af;
+				border-style: none;
+				border-top-style: dotted;
+				border-width: 7px;
+				width: 10%;
+			}
+
+
+			.container {
+				position: relative;
+				display: inline-block;
+			}
+
+			span {
+				text-decoration: underline;
+			}
+
+			h1 {
+				font-size: 200;
+				font-style: normal;
+				color: #f5dea3;
+				margin:0;
+				padding-top: 50px;
+			}
+
+			p {
+				margin:0;
+				font-size: 140;
+				color:#42e6a4
+			}
