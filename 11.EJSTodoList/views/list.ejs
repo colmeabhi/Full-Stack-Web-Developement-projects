@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>To Do</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="box" id="heading">
+  <h1> <%= DayName %> </h1>
+</div>
+
+<div class="box">
+  <!-- while rendering the dayname we have to render items at same time if one is rendered before the other then error comes -->
+  <% for(var i=0; i<passedarr.length; i++) { %>
+  <div class="item">
+    <input type="checkbox">
+    <p> <%= passedarr[i] %> </p>
+  </div>
+  <% } %>
+
+  <form class="item" method="post" action="/">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="button">+</button>
+  </form>
+</div>
+
+
+</body>
+</html>
