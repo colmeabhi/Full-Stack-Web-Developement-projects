@@ -5,6 +5,7 @@ const app = express();
 
 let item = "";
 let arr = [];
+let arr_work = [];
 
 app.set('view engine', 'ejs');
 //body parser acts as a middleware and allows us to get value from the html.
@@ -19,16 +20,22 @@ app.get("/", function(req, res) {
 
   let day = today.toLocaleDateString("en-us", options);
 
-  res.render("list", {DayName:day, passedarr:arr}); // variable sent is DayName to be used in html. Needs to render at same time.
+  res.render("list", {Listtitle:day, passedarr:arr}); // variable sent is DayName to be used in html. Needs to render at same time.
 });
 
 app.post("/", function(req, res) {
   // Body parser allow us to do that.
+  console.log(res);
   item = req.body.newItem;
   arr.push(item);
   // redirects to the home route. Used to avoid diffrent timing renders of <%= %> tag
   res.redirect("/");
 });
+
+app.get("/work", function(req, res) {
+  res.render("list", {Listtitle:day, passedarr:arr_work});
+})
+
 
 app.listen(3000, function() {
   console.log("server started at port 3000");
