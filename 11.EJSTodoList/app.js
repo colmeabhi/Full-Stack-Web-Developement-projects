@@ -16,7 +16,10 @@ app.get("/", function(req, res) {
   let today = new Date();
 
   //Created an object to specify format for date
-  let options = { weekday : "long", day : "numeric", month : "long" };
+  let options = { weekday : "long", 
+                  day : "numeric", 
+                  month : "long" 
+                };
 
   let day = today.toLocaleDateString("en-us", options);
 
@@ -25,16 +28,24 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
   // Body parser allow us to do that.
-  console.log(res);
-  item = req.body.newItem;
-  arr.push(item);
-  // redirects to the home route. Used to avoid diffrent timing renders of <%= %> tag
-  res.redirect("/");
+  let item = req.body.newItem;
+
+  if(req.body.list == "Work") {
+    arr_work.push(item);
+    res.redirect("/work")
+  }
+  else {
+    arr.push(item);
+    // redirects to the home route. Used to avoid diffrent timing renders of <%= %> tag
+    res.redirect("/");
+  }
+
 });
 
 app.get("/work", function(req, res) {
-  res.render("list", {Listtitle:day, passedarr:arr_work});
-})
+  res.render("list", {Listtitle : "Work list", passedarr: arr_work});
+});
+
 
 
 app.listen(3000, function() {
