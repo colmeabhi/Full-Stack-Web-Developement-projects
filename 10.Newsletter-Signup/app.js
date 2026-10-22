@@ -41,12 +41,13 @@ app.post('/', function(req, res) {
   // Now to convert this js in json as the input taken by api is in json
   const jsonData = JSON.stringify(data);
   // Make your url see how to add to the list you have then type your list id as well as see the server which you got on you api key add it as usX x=server no.
-  const url = "https://us10.api.mailchimp.com/3.0/lists/844be6acf3";
+  // Credentials come from the environment (see .env.example); never commit them.
+  const url = `https://${process.env.MAILCHIMP_SERVER}.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}`;
   // now the req module just gets the data from the api we need to post the data too so we saw docs and added a method to the get req. here we set that method
   const options = {
     method: "POST",
   // this is added for authentication basic authentication
-    auth: "colmeabhi:b4f28b3d323c3b2a8345aa90ef481a99-us10"
+    auth: `anystring:${process.env.MAILCHIMP_API_KEY}`
   };
   // Now we need to post the data to the external module see the docs for https.request to post the data
   // in order to send the data we need to put it into a constant then write that constant to the mailchimp server
@@ -77,8 +78,3 @@ app.post('/', function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
   console.log("server running at port 3000");
 });
-// api key
-// b4f28b3d323c3b2a8345aa90ef481a99-us10
-
-// list id:
-// 844be6acf3
